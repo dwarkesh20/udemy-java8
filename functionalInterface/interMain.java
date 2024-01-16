@@ -13,11 +13,10 @@ public interface interMain {
         Predicate<Integer> p3 = p1.and(p2);
         Predicate<Integer> p4 = p1.or(p2);
 
-        System.out.println("p1: "+p1.test(22));
-        System.out.println("p2: "+p2.test(23));
-        System.out.println("p3: "+p3.test(23));
-        System.out.println("p4: "+p4.test(23));
-
+        System.out.println("p1: " + p1.test(22));
+        System.out.println("p2: " + p2.test(23));
+        System.out.println("p3: " + p3.test(23));
+        System.out.println("p4: " + p4.test(23));
 
         Predicate<Collection<Integer>> p = c -> c.isEmpty();
         ArrayList<Integer> list = new ArrayList<>();

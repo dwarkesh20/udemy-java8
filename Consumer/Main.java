@@ -14,7 +14,11 @@ public class Main {
         Consumer<String> cr = con.andThen(s -> System.out.println(s + " is fine."));
         cr.accept("DD");
 
-        BiConsumer<Integer, Integer> biConsumer = (a,b)->System.out.println(a+b);
+        BiConsumer<Integer, Integer> biConsumer = (a, b) -> System.out.println(a + b);
         biConsumer.accept(5, 7);
+
+        Consumer<Integer> biC = System.out::println;
+        biC.accept(10);
+
     }
 }

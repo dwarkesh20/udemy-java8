@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
+
 public class Main {
     public static void main(String[] args) {
         List<Integer> list = new ArrayList<>();
@@ -15,8 +16,10 @@ public class Main {
         System.out.println("Original List : " + list);
 
         //filter
-        System.out.print("Even elements in the list are: ");
-        l = list.stream().filter(i -> i % 2 == 0).toList();
+        System.out.println("Even elements in the list are: ");
+        l = list.stream()
+        .peek(System.out::println) //just to check
+        .filter(i -> i % 2 == 0).toList();
         System.out.println(l);
         // list.stream().filter(i -> i % 2 == 0).forEach(System.out::println);
 
@@ -54,6 +57,6 @@ public class Main {
         long n = Stream.of(arr).count();
         System.out.println("\nNumber of elements in Array: "+n);
 
-
+        
     }
 }

@@ -9,5 +9,6 @@ public class Auth {
         Scanner sc = new Scanner(System.in);
         User user1 = new User(sc.next(), sc.next());
         System.out.println(p.test(user1) ? "OK" : "FO");
+        sc.close();
     }
 }
